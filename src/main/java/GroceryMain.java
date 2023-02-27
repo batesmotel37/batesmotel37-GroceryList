@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Scanner;
+import java.util.List;
 /**
  * There is no need to change anything in this class.
  * It does not affect the outcome of the test cases.
@@ -32,7 +33,10 @@ public class GroceryMain {
                     break;
                 case 2:
                     System.out.println("Here are all the groceries: ");
-                    groceryDAO.getAllGroceries();
+                    List<String> g = groceryDAO.getAllGroceries();
+                    for(String itor:g){
+                        System.out.println(itor);
+                    }
                     break;
                 case 3:
                     System.out.println("Goodbye!");
